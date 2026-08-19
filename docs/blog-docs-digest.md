@@ -101,7 +101,7 @@ CONTRACT.md + schema/*.json  # 契约②：结构规范 + manifest/search-index 
 ## 7. 待办与待澄清（落地本仓库时需处理）
 
 1. **Q-016 回写**：story 仓库实际为 `wesloong/article`（文档暂定 `wesloong/posts`），需在 blog 文档中确认更新。
-2. **Q-019**：story 站点域名待定（暂定 `story.wesloong.com`）。
+2. ~~**Q-019**：story 站点域名~~ 已确认 `story.wesloong.com`（2026-08-19 部署上线）。
 3. **D-010 剩余项**：本仓库建立 CI 后实测 Actions 端到端延迟（验收 ≤ 2min，预估 60–120s）。
 4. 建立 `CONTRACT.md` + `schema/manifest.json` + `schema/search-index.json`（契约②，语义化版本；博客 CI 做 schema 冒烟校验，BR-099）。
 5. 迁入 `poc/ci-build/build.mjs` 与参考 workflow，配置 Pages 部署与 Webhook secret（契约③）。

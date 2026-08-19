@@ -15,7 +15,7 @@
 ## 契约②：内容 API（story 站点，主读通道）
 
 部署：Cloudflare Pages 直接发布已提交的 `docs-html/`（无二次构建）+ Pages Functions。
-域名暂定 `story.wesloong.com`（Q-019 待确认）。全部接口只读——**本项目不提供任何写接口**，写操作一律走 GitHub（§写通道）。
+域名 `story.wesloong.com`（Q-019 已确认，2026-08-19 已部署上线）。全部接口只读——**本项目不提供任何写接口**，写操作一律走 GitHub（§写通道）。
 
 ### 1. 仓库结构规范（BR-090）
 

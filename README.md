@@ -42,6 +42,6 @@ npm run build     # posts/** -> docs-html/**（含 manifest.json / search-index.
 
 | 项 | 说明 |
 |----|------|
-| Cloudflare Pages | 关联本仓库，构建命令留空，输出目录 `docs-html`；域名暂定 story.wesloong.com（Q-019） |
+| Cloudflare Pages | ✅ 已部署：输出目录 `docs-html`，域名 story.wesloong.com（Q-019 已确认） |
 | `SITE_WEBHOOK_SECRET` | GitHub Actions secret；与博客侧 Workers Secret 一致（契约③ HMAC） |
 | `CLOUDFLARE_API_TOKEN` / `CLOUDFLARE_ACCOUNT_ID` / `R2_BUCKET` | GitHub Actions secrets；未配置时 CI 自动跳过 R2 同步 |
