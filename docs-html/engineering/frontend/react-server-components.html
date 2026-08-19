@@ -1,0 +1,20 @@
+<h2>Why RSC</h2>
+<p>Server components let you keep heavy dependencies on the server.</p>
+<pre style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8"><code><span><span style="color:#D73A49;--shiki-dark:#F97583">async</span><span style="color:#D73A49;--shiki-dark:#F97583"> function</span><span style="color:#6F42C1;--shiki-dark:#B392F0"> PostList</span><span style="color:#24292E;--shiki-dark:#E1E4E8">() {</span></span>
+<span><span style="color:#D73A49;--shiki-dark:#F97583">  const</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> posts</span><span style="color:#D73A49;--shiki-dark:#F97583"> =</span><span style="color:#D73A49;--shiki-dark:#F97583"> await</span><span style="color:#6F42C1;--shiki-dark:#B392F0"> getPosts</span><span style="color:#24292E;--shiki-dark:#E1E4E8">();</span></span>
+<span><span style="color:#D73A49;--shiki-dark:#F97583">  return</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> (</span></span>
+<span><span style="color:#24292E;--shiki-dark:#E1E4E8">    &#x3C;</span><span style="color:#22863A;--shiki-dark:#85E89D">ul</span><span style="color:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span><span style="color:#24292E;--shiki-dark:#E1E4E8">      {posts.</span><span style="color:#6F42C1;--shiki-dark:#B392F0">map</span><span style="color:#24292E;--shiki-dark:#E1E4E8">((</span><span style="color:#E36209;--shiki-dark:#FFAB70">p</span><span style="color:#24292E;--shiki-dark:#E1E4E8">) </span><span style="color:#D73A49;--shiki-dark:#F97583">=></span><span style="color:#24292E;--shiki-dark:#E1E4E8"> (</span></span>
+<span><span style="color:#24292E;--shiki-dark:#E1E4E8">        &#x3C;</span><span style="color:#22863A;--shiki-dark:#85E89D">li</span><span style="color:#6F42C1;--shiki-dark:#B392F0"> key</span><span style="color:#D73A49;--shiki-dark:#F97583">=</span><span style="color:#24292E;--shiki-dark:#E1E4E8">{p.slug}>{p.title}&#x3C;/</span><span style="color:#22863A;--shiki-dark:#85E89D">li</span><span style="color:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span><span style="color:#24292E;--shiki-dark:#E1E4E8">      ))}</span></span>
+<span><span style="color:#24292E;--shiki-dark:#E1E4E8">    &#x3C;/</span><span style="color:#22863A;--shiki-dark:#85E89D">ul</span><span style="color:#24292E;--shiki-dark:#E1E4E8">></span></span>
+<span><span style="color:#24292E;--shiki-dark:#E1E4E8">  );</span></span>
+<span><span style="color:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre>
+<h2>Trade-offs</h2>
+<ol>
+<li>No client-side state in server components</li>
+<li>Streaming needs framework support</li>
+</ol>
+<blockquote>
+<p>RSC is a spectrum, not a switch.</p>
+</blockquote>

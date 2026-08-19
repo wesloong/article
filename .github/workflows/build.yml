@@ -1,0 +1,60 @@
+# story 仓库 CI 编译管线（blog PRD BR-071/090、RISK-015；参考 blog 仓库 poc/ci-build/workflow-reference.yml）
+# 要点：
+#   1. 只在 posts/** 或 assets/** 变更时触发（path 过滤，保险 1）
+#   2. 产物提交带 [skip ci]，且 paths 不含 docs-html/** —— 双保险防循环构建
+#   3. 校验失败（frontmatter 缺必填等）即构建失败，不产生半成品产物
+#   4. 资产分级增量同步 R2（BR-107/114；未配置 R2 secrets 时自动跳过）
+#   5. 产物推送后 Cloudflare Pages 自动部署 docs-html/；随后通知站点 Webhook（契约③，HMAC 签名）
+#      注：理想触发点是 Pages「部署完成」事件；当前在产物推送后通知，博客侧有定时对账兜底（BR-113）
+name: build-content
+on:
+  push:
+    branches: [main]
+    paths: ['posts/**', 'assets/**']   # 产物目录变更不触发（防循环，保险 1）
+  workflow_dispatch:                    # 手动全量重建（如管线升级后）
+
+concurrency:
+  group: build-content
+  cancel-in-progress: true              # 连续 push 只跑最新一次
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      R2_BUCKET: ${{ secrets.R2_BUCKET }}
+      WEBHOOK_SECRET: ${{ secrets.SITE_WEBHOOK_SECRET }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0                # manifest 的 updatedAt 取自各文件最后提交时间
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run build              # 校验 + 编译：posts/** -> docs-html/** + manifest + search-index
+      - run: npm run validate           # 契约自校验：产物须符合 schema/（BR-099 提供方侧）
+
+      - name: sync assets to R2 (incremental, BR-107/114)
+        if: env.CLOUDFLARE_API_TOKEN != ''
+        run: npm run sync-assets        # 与 HEAD 的 assets-manifest 比对，只传变更；须在产物提交前执行
+
+      - name: commit artifacts
+        run: |
+          git config user.name  "story-ci"
+          git config user.email "ci@wesloong.com"
+          git add docs-html
+          git diff --cached --quiet || git commit -m "build: compile content [skip ci]"   # 保险 2
+          git push
+
+      - name: notify site (contract #3)
+        if: env.WEBHOOK_SECRET != ''
+        run: |
+          BODY="{\"event\":\"content-updated\",\"sha\":\"$GITHUB_SHA\"}"
+          SIG=$(printf '%s' "$BODY" | openssl dgst -sha256 -hmac "$WEBHOOK_SECRET" | cut -d' ' -f2)
+          curl -fsS -X POST "https://wesloong.com/api/hooks/content" \
+            -H "content-type: application/json" -H "x-signature: sha256=$SIG" -d "$BODY"

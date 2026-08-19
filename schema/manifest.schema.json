@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://story.wesloong.com/schema/manifest.schema.json",
+  "title": "story manifest.json（契约② v1.0.0）",
+  "type": "object",
+  "required": ["contractVersion", "generatedAt", "posts", "assets"],
+  "properties": {
+    "contractVersion": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$" },
+    "generatedAt": { "type": "string", "format": "date-time" },
+    "contentSha": { "type": ["string", "null"], "description": "源 commit sha（BR-112）" },
+    "posts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "slug", "category", "title", "summary", "tags", "language", "draft",
+          "words", "toc", "sourcePath", "htmlPath", "sourceSha256", "updatedAt"
+        ],
+        "properties": {
+          "slug": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+          "category": { "type": "string" },
+          "title": { "type": "string", "minLength": 1 },
+          "summary": { "type": "string" },
+          "tags": { "type": "array", "items": { "type": "string" } },
+          "language": { "enum": ["zh", "en"] },
+          "draft": { "type": "boolean", "description": "true = 仅同步不发布（BR-113）" },
+          "cover": { "type": "string" },
+          "publishedAt": { "type": "string", "format": "date-time" },
+          "translationOf": { "type": "string" },
+          "words": { "type": "integer", "minimum": 0 },
+          "toc": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["depth", "text"],
+              "properties": {
+                "depth": { "type": "integer", "minimum": 2, "maximum": 3 },
+                "text": { "type": "string" }
+              }
+            }
+          },
+          "sourcePath": { "type": "string", "pattern": "^posts/.+\\.md$" },
+          "htmlPath": { "type": "string", "pattern": "^docs-html/.+\\.html$" },
+          "sourceSha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+          "updatedAt": { "type": "string", "format": "date-time" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "assets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["path", "size", "sha256", "servedVia"],
+        "properties": {
+          "path": { "type": "string", "pattern": "^assets/.+$" },
+          "size": { "type": "integer", "minimum": 0 },
+          "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+          "servedVia": { "enum": ["r2", "raw"], "description": "BR-114：≤10MB=r2 镜像，>10MB=raw 直出" }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

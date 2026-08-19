@@ -1,0 +1,43 @@
+<h2>背景</h2>
+<p>个人博客部署在 Cloudflare Workers 上，渲染成本直接映射为账单。本文记录四层缓存的设计。</p>
+<h2>缓存分层</h2>
+<p>边缘缓存命中时请求根本不会到达 Workers：</p>
+<table>
+<thead>
+<tr>
+<th>层</th>
+<th>载体</th>
+<th>命中率目标</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>L1</td>
+<td>浏览器/SW</td>
+<td>-</td>
+</tr>
+<tr>
+<td>L2</td>
+<td>CDN Edge</td>
+<td>>= 90%</td>
+</tr>
+<tr>
+<td>L3</td>
+<td>KV 副本</td>
+<td>兜底</td>
+</tr>
+</tbody>
+</table>
+<h3>失效策略</h3>
+<p>发布文章时精准失效相关页面，兜底 TTL 一小时：</p>
+<pre style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8"><code><span><span style="color:#D73A49;--shiki-dark:#F97583">export</span><span style="color:#D73A49;--shiki-dark:#F97583"> async</span><span style="color:#D73A49;--shiki-dark:#F97583"> function</span><span style="color:#6F42C1;--shiki-dark:#B392F0"> invalidate</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(</span><span style="color:#E36209;--shiki-dark:#FFAB70">scope</span><span style="color:#D73A49;--shiki-dark:#F97583">:</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> string</span><span style="color:#24292E;--shiki-dark:#E1E4E8">, </span><span style="color:#E36209;--shiki-dark:#FFAB70">keys</span><span style="color:#D73A49;--shiki-dark:#F97583">:</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> string</span><span style="color:#24292E;--shiki-dark:#E1E4E8">[]) {</span></span>
+<span><span style="color:#D73A49;--shiki-dark:#F97583">  await</span><span style="color:#005CC5;--shiki-dark:#79B8FF"> Promise</span><span style="color:#24292E;--shiki-dark:#E1E4E8">.</span><span style="color:#6F42C1;--shiki-dark:#B392F0">all</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(keys.</span><span style="color:#6F42C1;--shiki-dark:#B392F0">map</span><span style="color:#24292E;--shiki-dark:#E1E4E8">((</span><span style="color:#E36209;--shiki-dark:#FFAB70">k</span><span style="color:#24292E;--shiki-dark:#E1E4E8">) </span><span style="color:#D73A49;--shiki-dark:#F97583">=></span><span style="color:#24292E;--shiki-dark:#E1E4E8"> caches.default.</span><span style="color:#6F42C1;--shiki-dark:#B392F0">delete</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(</span><span style="color:#D73A49;--shiki-dark:#F97583">new</span><span style="color:#6F42C1;--shiki-dark:#B392F0"> Request</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(k))));</span></span>
+<span><span style="color:#24292E;--shiki-dark:#E1E4E8">  console.</span><span style="color:#6F42C1;--shiki-dark:#B392F0">log</span><span style="color:#24292E;--shiki-dark:#E1E4E8">(</span><span style="color:#032F62;--shiki-dark:#9ECBFF">`invalidated ${</span><span style="color:#24292E;--shiki-dark:#E1E4E8">scope</span><span style="color:#032F62;--shiki-dark:#9ECBFF">}: ${</span><span style="color:#24292E;--shiki-dark:#E1E4E8">keys</span><span style="color:#032F62;--shiki-dark:#9ECBFF">.</span><span style="color:#005CC5;--shiki-dark:#79B8FF">length</span><span style="color:#032F62;--shiki-dark:#9ECBFF">} keys`</span><span style="color:#24292E;--shiki-dark:#E1E4E8">);</span></span>
+<span><span style="color:#24292E;--shiki-dark:#E1E4E8">}</span></span></code></pre>
+<h3>注意事项</h3>
+<ul>
+<li>评论走 CSR，静态页不含动态数据</li>
+<li>语言前缀 <code>/en</code> <code>/zh</code> 是独立缓存键</li>
+</ul>
+<h2>结论</h2>
+<p><strong>缓存命中率</strong>是这套架构最重要的指标，没有之一。</p>

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://story.wesloong.com/schema/search-index.schema.json",
+  "title": "story search-index.json（契约② v1.0.0；仅含非 draft 文章，BR-096）",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["slug", "category", "title", "summary", "tags", "language", "headings"],
+    "properties": {
+      "slug": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+      "category": { "type": "string" },
+      "title": { "type": "string", "minLength": 1 },
+      "summary": { "type": "string" },
+      "tags": { "type": "array", "items": { "type": "string" } },
+      "language": { "enum": ["zh", "en"] },
+      "headings": { "type": "array", "items": { "type": "string" } }
+    },
+    "additionalProperties": false
+  }
+}

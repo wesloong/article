@@ -1,0 +1,29 @@
+{
+  "name": "story-content",
+  "private": true,
+  "type": "module",
+  "description": "内容项目 story：文章 md/资产真相源 + CI 编译产物 + 内容站点（契约②③提供方）",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "node build.mjs",
+    "validate": "node validate.mjs",
+    "sync-assets": "node sync-assets.mjs"
+  },
+  "dependencies": {
+    "@shikijs/rehype": "^3.9.2",
+    "gray-matter": "^4.0.3",
+    "rehype-sanitize": "^6.0.0",
+    "rehype-stringify": "^10.0.1",
+    "remark-gfm": "^4.0.1",
+    "remark-parse": "^11.0.0",
+    "remark-rehype": "^11.1.2",
+    "shiki": "^3.9.2",
+    "unified": "^11.0.5"
+  },
+  "devDependencies": {
+    "ajv": "^8.20.0",
+    "ajv-formats": "^3.0.1"
+  }
+}
