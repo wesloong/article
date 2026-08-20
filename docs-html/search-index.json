@@ -1,5 +1,21 @@
 [
   {
+    "slug": "ai-agents-from-greenhouse-to-open-world-challenges-and-new-e",
+    "category": "engineering",
+    "title": "AI智能体：从“温室”走向“开放世界”的挑战与评测新维度",
+    "summary": "当前AI智能体在复杂、动态的开放世界中面临严峻挑战。美团开源的LoHoSearch和MineExplorer评测基准，分别聚焦搜索智能体和多模态大模型，揭示了它们在长程规划、隐藏前置条件处理及动态环境适应性上的能力断层。这些新基准强调了AI需要从静态知识图谱和固定场景中走出，去应对真实世界的复杂性。",
+    "tags": [
+      "AI",
+      "智能体",
+      "评测基准",
+      "多模态大模型"
+    ],
+    "language": "zh",
+    "headings": [
+      "参考资料"
+    ]
+  },
+  {
     "slug": "cf-workers-caching",
     "category": "engineering",
     "title": "Cloudflare Workers 多层缓存实践",
@@ -31,6 +47,22 @@
     "headings": [
       "Why RSC",
       "Trade-offs"
+    ]
+  },
+  {
+    "slug": "meituan-ai-agent-evolution-catpaw-kdd-cup",
+    "category": "engineering",
+    "title": "美团AI Agent的演进：从CatPaw到KDD Cup的智能体竞赛",
+    "summary": "美团正通过CatPaw全场景AI Agent平台和在KDD Cup等竞赛中的实践，推动AI技术在个人提效和企业智能化方面的落地。CatPaw集成了强大的大模型能力和本地生活服务领域知识，而KDD Cup的参赛经验则加速了数据智能体在复杂异构数据分析中的自主推理能力。",
+    "tags": [
+      "AI Agent",
+      "大模型",
+      "美团",
+      "KDD Cup"
+    ],
+    "language": "zh",
+    "headings": [
+      "参考资料"
     ]
   }
 ]
