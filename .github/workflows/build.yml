@@ -1,7 +1,9 @@
 # story 仓库 CI 编译管线（blog PRD BR-071/090、RISK-015；参考 blog 仓库 poc/ci-build/workflow-reference.yml）
 # 要点：
 #   1. 只在 posts/** 或 assets/** 变更时触发（path 过滤，保险 1）
-#   2. 产物提交带 [skip ci]，且 paths 不含 docs-html/** —— 双保险防循环构建
+#   2. 防循环只靠上面那条 path 过滤。**产物提交不能带 [skip ci]** —— Cloudflare Pages
+#      同样认这个标记，而带标记的那个提交正好是唯一装着新 docs-html/ 的提交，
+#      于是 Pages 永远部署上一轮的产物，站点长期落后一次内容更新（2026-08-20 实测）
 #   3. 校验失败（frontmatter 缺必填等）即构建失败，不产生半成品产物
 #   4. 资产分级增量同步 R2（BR-107/114；未配置 R2 secrets 时自动跳过）
 #   5. 产物推送后 Cloudflare Pages 自动部署 docs-html/；随后通知站点 Webhook（契约③，HMAC 签名）
@@ -48,7 +50,9 @@ jobs:
           git config user.name  "story-ci"
           git config user.email "ci@wesloong.com"
           git add docs-html
-          git diff --cached --quiet || git commit -m "build: compile content [skip ci]"   # 保险 2
+          # 不加 [skip ci]：Actions 靠上面的 paths 过滤就不会自触发，而 Pages 认这个
+          # 标记会跳过部署 —— 加了它，新产物就永远发不出去
+          git diff --cached --quiet || git commit -m "build: compile content"
           git push
 
       - name: notify site (contract #3)
