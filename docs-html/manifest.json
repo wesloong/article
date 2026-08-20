@@ -1,7 +1,7 @@
 {
   "contractVersion": "1.0.0",
-  "generatedAt": "2026-08-20T12:59:33.280Z",
-  "contentSha": "4c4d96dc06de8add10f9a2647c1c248746135f8c",
+  "generatedAt": "2026-08-20T13:57:24.177Z",
+  "contentSha": "232d327d7d8e18b5cdb303c220ea0d8934e963b1",
   "posts": [
     {
       "slug": "ai-agents-from-greenhouse-to-open-world-challenges-and-new-e",
@@ -17,6 +17,7 @@
       "language": "zh",
       "draft": false,
       "publishedAt": "2026-08-20T00:00:00.000Z",
+      "aiAssisted": true,
       "words": 2606,
       "toc": [
         {
@@ -110,6 +111,7 @@
       "language": "zh",
       "draft": false,
       "publishedAt": "2026-08-20T00:00:00.000Z",
+      "aiAssisted": true,
       "words": 2028,
       "toc": [
         {
@@ -131,6 +133,7 @@
       "language": "zh",
       "draft": false,
       "publishedAt": "2026-08-20T00:00:00.000Z",
+      "aiAssisted": true,
       "words": 4757,
       "toc": [
         {

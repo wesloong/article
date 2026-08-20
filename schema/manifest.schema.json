@@ -27,6 +27,11 @@
           "cover": { "type": "string" },
           "publishedAt": { "type": "string", "format": "date-time" },
           "translationOf": { "type": "string" },
+          "series": { "type": "string", "description": "系列名（BR-122），博客据此渲染系列导航" },
+          "seriesOrder": { "type": "integer", "minimum": 1, "description": "系列内序号" },
+          "aiAssisted": { "type": "boolean", "description": "AI 参与创作（BR-170/NFR-132），博客据此渲染披露条 —— 合规项，不能漏" },
+          "reprinted": { "type": "boolean", "description": "转载（BR-177）" },
+          "canonicalUrl": { "type": "string", "description": "转载时指向原文" },
           "words": { "type": "integer", "minimum": 0 },
           "toc": {
             "type": "array",

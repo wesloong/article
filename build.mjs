@@ -157,6 +157,15 @@ for (const { file, rel, raw, fm, content } of parsed) {
     ...(fm.cover ? { cover: fm.cover } : {}),
     ...(fm.published_at ? { publishedAt: new Date(fm.published_at).toISOString() } : {}),
     ...(fm.translation_of ? { translationOf: fm.translation_of } : {}),
+    // 下面这几个是 blog 侧 ManifestPost 一直期望、这里却一直没映射的字段。
+    // 漏掉不会报错，只是前台功能静默失效：系列导航不出现、AI 披露条不出现
+    // （BR-170/NFR-132 是合规项）、转载来源不出现（BR-177）。
+    // frontmatter 用蛇形，manifest 用驼峰 —— 与 translation_of → translationOf 同一规则。
+    ...(fm.series ? { series: String(fm.series) } : {}),
+    ...(fm.series_order != null ? { seriesOrder: Number(fm.series_order) } : {}),
+    ...(fm.ai_assisted === true ? { aiAssisted: true } : {}),
+    ...(fm.reprinted === true ? { reprinted: true } : {}),
+    ...(fm.canonical_url ? { canonicalUrl: String(fm.canonical_url) } : {}),
     words,
     toc: toc(content),
     sourcePath: `posts/${rel}`,
