@@ -64,5 +64,18 @@
     "headings": [
       "参考资料"
     ]
+  },
+  {
+    "slug": "weekly-001",
+    "category": "weekly",
+    "title": "第 1 期",
+    "summary": "本期 20 条：工程实践 5 · 工具与生态 6 · 行业动态 9",
+    "tags": [],
+    "language": "zh",
+    "headings": [
+      "工程实践",
+      "工具与生态",
+      "行业动态"
+    ]
   }
 ]

@@ -1,7 +1,7 @@
 {
   "contractVersion": "1.0.0",
-  "generatedAt": "2026-08-20T12:43:24.715Z",
-  "contentSha": "6c54e3dace801d16b46a9b1bc927937261cb6ae7",
+  "generatedAt": "2026-08-20T12:59:33.280Z",
+  "contentSha": "4c4d96dc06de8add10f9a2647c1c248746135f8c",
   "posts": [
     {
       "slug": "ai-agents-from-greenhouse-to-open-world-challenges-and-new-e",
@@ -121,6 +121,35 @@
       "htmlPath": "docs-html/engineering/meituan-ai-agent-evolution-catpaw-kdd-cup.html",
       "sourceSha256": "9ce64d07c353ebec5a1dd531e6924825ecf2ac35998a2718f7a2a38e82922b66",
       "updatedAt": "2026-08-20T20:37:44+08:00"
+    },
+    {
+      "slug": "weekly-001",
+      "category": "weekly",
+      "title": "第 1 期",
+      "summary": "本期 20 条：工程实践 5 · 工具与生态 6 · 行业动态 9",
+      "tags": [],
+      "language": "zh",
+      "draft": false,
+      "publishedAt": "2026-08-20T00:00:00.000Z",
+      "words": 4757,
+      "toc": [
+        {
+          "depth": 2,
+          "text": "工程实践"
+        },
+        {
+          "depth": 2,
+          "text": "工具与生态"
+        },
+        {
+          "depth": 2,
+          "text": "行业动态"
+        }
+      ],
+      "sourcePath": "posts/weekly/weekly-001.md",
+      "htmlPath": "docs-html/weekly/weekly-001.html",
+      "sourceSha256": "8d581046b7dae94f6763770d9d490416e180684db36b5fafcb43255f7522418b",
+      "updatedAt": "2026-08-20T20:55:33+08:00"
     }
   ],
   "assets": []
