@@ -1,7 +1,7 @@
 {
   "contractVersion": "1.0.0",
-  "generatedAt": "2026-08-19T00:20:34.866Z",
-  "contentSha": "0330944b7a421ae21e5b1490def231261424dc97",
+  "generatedAt": "2026-08-20T12:38:03.293Z",
+  "contentSha": "a00b7038fc33a01d3c918db6a67f6b50d6e46e5f",
   "posts": [
     {
       "slug": "cf-workers-caching",
@@ -40,7 +40,7 @@
       "sourcePath": "posts/engineering/cf-workers-caching.md",
       "htmlPath": "docs-html/engineering/cf-workers-caching.html",
       "sourceSha256": "8ae36edb665c7b618071ee82921132e1b62c629ce66c27d54820ed70593b5f04",
-      "updatedAt": "2026-08-19T00:18:31.003Z"
+      "updatedAt": "2026-08-19T00:20:51Z"
     },
     {
       "slug": "react-server-components",
@@ -68,7 +68,33 @@
       "sourcePath": "posts/engineering/frontend/react-server-components.md",
       "htmlPath": "docs-html/engineering/frontend/react-server-components.html",
       "sourceSha256": "94c5986e1b192a75171d2d999e839c5b262d96622a6c60d9cb001dfa5468c57b",
-      "updatedAt": "2026-08-19T00:18:31.006Z"
+      "updatedAt": "2026-08-19T00:20:51Z"
+    },
+    {
+      "slug": "meituan-ai-agent-evolution-catpaw-kdd-cup",
+      "category": "engineering",
+      "title": "美团AI Agent的演进：从CatPaw到KDD Cup的智能体竞赛",
+      "summary": "美团正通过CatPaw全场景AI Agent平台和在KDD Cup等竞赛中的实践，推动AI技术在个人提效和企业智能化方面的落地。CatPaw集成了强大的大模型能力和本地生活服务领域知识，而KDD Cup的参赛经验则加速了数据智能体在复杂异构数据分析中的自主推理能力。",
+      "tags": [
+        "AI Agent",
+        "大模型",
+        "美团",
+        "KDD Cup"
+      ],
+      "language": "zh",
+      "draft": false,
+      "publishedAt": "2026-08-20T00:00:00.000Z",
+      "words": 2028,
+      "toc": [
+        {
+          "depth": 2,
+          "text": "参考资料"
+        }
+      ],
+      "sourcePath": "posts/engineering/meituan-ai-agent-evolution-catpaw-kdd-cup.md",
+      "htmlPath": "docs-html/engineering/meituan-ai-agent-evolution-catpaw-kdd-cup.html",
+      "sourceSha256": "9ce64d07c353ebec5a1dd531e6924825ecf2ac35998a2718f7a2a38e82922b66",
+      "updatedAt": "2026-08-20T20:37:44+08:00"
     }
   ],
   "assets": []
