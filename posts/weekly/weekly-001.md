@@ -4,7 +4,6 @@ slug: weekly-001
 category: weekly
 language: zh
 summary: "本期 20 条：工程实践 5 · 工具与生态 6 · 行业动态 9"
-draft: true
 ai_assisted: true
 published_at: 2026-08-20
 ---
