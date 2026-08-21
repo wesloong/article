@@ -1,8 +1,35 @@
 {
   "contractVersion": "1.0.0",
-  "generatedAt": "2026-08-21T02:54:29.671Z",
-  "contentSha": "8b5905a22b10a5146ffda0be36453f64f63fd2a7",
+  "generatedAt": "2026-08-21T04:28:55.326Z",
+  "contentSha": "de607183866a4439ceb7bde9960d0f9a1e96827c",
   "posts": [
+    {
+      "slug": "ai-era-font-defense-moat-or-moon-in-water",
+      "category": "ai",
+      "title": "AI 时代的字体攻防：是“护城河”还是“水中月”？",
+      "summary": "随着 AI 技术的飞速发展，内容创作者面临着 AI 盗用作品的风险。一些人尝试通过“反 AI 字体”来保护版权，但这种方法被认为效果有限且可能带来负面影响。本文探讨了反 AI 字体的技术局限、可访问性问题以及其在 AI 时代可能扮演的角色。",
+      "tags": [
+        "AI",
+        "字体",
+        "版权保护",
+        "内容创作"
+      ],
+      "language": "zh",
+      "draft": false,
+      "publishedAt": "2026-08-21T00:00:00.000Z",
+      "aiAssisted": true,
+      "words": 1604,
+      "toc": [
+        {
+          "depth": 2,
+          "text": "参考资料"
+        }
+      ],
+      "sourcePath": "posts/ai/ai-era-font-defense-moat-or-moon-in-water.md",
+      "htmlPath": "docs-html/ai/ai-era-font-defense-moat-or-moon-in-water.html",
+      "sourceSha256": "eb65c7a4da349db6b4d7fb35f5d3430d117fca2d3f8caa829abd18ccbc1adef8",
+      "updatedAt": "2026-08-21T12:28:37+08:00"
+    },
     {
       "slug": "ai-in-software-development-double-edged-sword",
       "category": "ai",
