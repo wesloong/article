@@ -1,5 +1,24 @@
 [
   {
+    "slug": "ai-in-software-development-double-edged-sword",
+    "category": "ai",
+    "title": "AI 在软件开发中的双刃剑：安全隐患与效率革新",
+    "summary": "AI 在软件开发领域展现出巨大潜力，但同时也带来了安全风险。本文探讨了 AI 驱动的代码生成、安全漏洞以及新型交互模式，揭示了 AI 在提升效率的同时，如何重塑开发者工作流并引发对代码可信度的思考。",
+    "tags": [
+      "AI",
+      "软件开发",
+      "安全",
+      "效率"
+    ],
+    "language": "zh",
+    "headings": [
+      "AI 代码生成：效率的助推器与潜在的风险源",
+      "新型 AI 交互模式：从指令到声明式设计",
+      "AI 在软件开发中的未来：安全、可控与协同",
+      "参考资料"
+    ]
+  },
+  {
     "slug": "ai-agents-from-greenhouse-to-open-world-challenges-and-new-e",
     "category": "engineering",
     "title": "AI智能体：从“温室”走向“开放世界”的挑战与评测新维度",
