@@ -1,7 +1,7 @@
 {
   "contractVersion": "1.0.0",
-  "generatedAt": "2026-08-21T04:28:55.326Z",
-  "contentSha": "de607183866a4439ceb7bde9960d0f9a1e96827c",
+  "generatedAt": "2026-08-21T04:29:57.358Z",
+  "contentSha": "7023e84c7c0344c13a435aab2ceae3e94d4f66e8",
   "posts": [
     {
       "slug": "ai-era-font-defense-moat-or-moon-in-water",
@@ -219,6 +219,44 @@
       "htmlPath": "docs-html/weekly/weekly-001.html",
       "sourceSha256": "8d581046b7dae94f6763770d9d490416e180684db36b5fafcb43255f7522418b",
       "updatedAt": "2026-08-20T20:55:33+08:00"
+    },
+    {
+      "slug": "weekly-002",
+      "category": "weekly",
+      "title": "第 2 期",
+      "summary": "本期 29 条：工程实践 11 · 工具与生态 10 · 系统设计 1 · 行业动态 3 · 其他 4",
+      "tags": [],
+      "language": "zh",
+      "draft": false,
+      "publishedAt": "2026-08-21T00:00:00.000Z",
+      "aiAssisted": true,
+      "words": 5847,
+      "toc": [
+        {
+          "depth": 2,
+          "text": "工程实践"
+        },
+        {
+          "depth": 2,
+          "text": "工具与生态"
+        },
+        {
+          "depth": 2,
+          "text": "系统设计"
+        },
+        {
+          "depth": 2,
+          "text": "行业动态"
+        },
+        {
+          "depth": 2,
+          "text": "其他"
+        }
+      ],
+      "sourcePath": "posts/weekly/weekly-002.md",
+      "htmlPath": "docs-html/weekly/weekly-002.html",
+      "sourceSha256": "6e2748b8436f31560476fb937d81fac2fcfa3ebc59bbd8315f9b8d6837c4e81d",
+      "updatedAt": "2026-08-21T12:29:39+08:00"
     }
   ],
   "assets": []
