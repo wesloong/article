@@ -1,8 +1,35 @@
 {
   "contractVersion": "1.0.0",
-  "generatedAt": "2026-08-21T04:29:57.358Z",
-  "contentSha": "7023e84c7c0344c13a435aab2ceae3e94d4f66e8",
+  "generatedAt": "2026-08-22T06:38:28.419Z",
+  "contentSha": "ef9755bdbd391505707f60c5e0ff8873e19a7198",
   "posts": [
+    {
+      "slug": "ai-agent-evolution-personal-to-enterprise",
+      "category": "ai",
+      "title": "AI Agent 的进化：从个人助手到企业智能中枢",
+      "summary": "AI Agent 正经历从个人效率工具到企业级智能化解决方案的深刻变革。美团 CatPaw 平台展示了 AI Agent 在多端协作、行业深度融合、复杂任务自主执行方面的能力，并为企业提供了数字员工和托管服务。同时，LoHoSearch 基准的出现，标志着对 AI Agent 在复杂搜索和推理能力评测进入新阶段，预示着 Agent 技术将朝着更深层次的认知和自主化方向发展。",
+      "tags": [
+        "AI Agent",
+        "大型语言模型",
+        "企业智能化",
+        "技术评测"
+      ],
+      "language": "zh",
+      "draft": false,
+      "publishedAt": "2026-08-22T00:00:00.000Z",
+      "aiAssisted": true,
+      "words": 1995,
+      "toc": [
+        {
+          "depth": 2,
+          "text": "参考资料"
+        }
+      ],
+      "sourcePath": "posts/ai/ai-agent-evolution-personal-to-enterprise.md",
+      "htmlPath": "docs-html/ai/ai-agent-evolution-personal-to-enterprise.html",
+      "sourceSha256": "503487efe9a5f34ff7db85169ec4ef8e758556dd3222206c59c6241279bbeb20",
+      "updatedAt": "2026-08-22T14:38:06+08:00"
+    },
     {
       "slug": "ai-era-font-defense-moat-or-moon-in-water",
       "category": "ai",
