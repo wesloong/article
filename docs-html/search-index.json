@@ -32,6 +32,22 @@
     ]
   },
   {
+    "slug": "ai-greenhouse-effect-perception-to-action-gap",
+    "category": "ai",
+    "title": "AI 的“温室效应”：从感知到行动的鸿沟",
+    "summary": "顶级多模态大模型在动态开放世界中面临严峻挑战。美团的MineExplorer评测基准揭示，模型在感知能力上表现尚可，但在需要长程规划、隐藏前置条件和持续探索的任务中，推理和行动能力出现显著断层。这不仅暴露了当前AI在“看见”到“行动”之间的鸿沟，也为具身智能等前沿领域的发展指明了方向。",
+    "tags": [
+      "AI",
+      "多模态大模型",
+      "具身智能",
+      "评测基准"
+    ],
+    "language": "zh",
+    "headings": [
+      "参考资料"
+    ]
+  },
+  {
     "slug": "ai-in-software-development-double-edged-sword",
     "category": "ai",
     "title": "AI 在软件开发中的双刃剑：安全隐患与效率革新",

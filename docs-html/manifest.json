@@ -1,7 +1,7 @@
 {
   "contractVersion": "1.0.0",
-  "generatedAt": "2026-08-22T06:38:28.419Z",
-  "contentSha": "ef9755bdbd391505707f60c5e0ff8873e19a7198",
+  "generatedAt": "2026-08-23T12:38:50.054Z",
+  "contentSha": "e2d513721b436ecc46f54851b84156f1aed951cb",
   "posts": [
     {
       "slug": "ai-agent-evolution-personal-to-enterprise",
@@ -56,6 +56,33 @@
       "htmlPath": "docs-html/ai/ai-era-font-defense-moat-or-moon-in-water.html",
       "sourceSha256": "eb65c7a4da349db6b4d7fb35f5d3430d117fca2d3f8caa829abd18ccbc1adef8",
       "updatedAt": "2026-08-21T12:28:37+08:00"
+    },
+    {
+      "slug": "ai-greenhouse-effect-perception-to-action-gap",
+      "category": "ai",
+      "title": "AI 的“温室效应”：从感知到行动的鸿沟",
+      "summary": "顶级多模态大模型在动态开放世界中面临严峻挑战。美团的MineExplorer评测基准揭示，模型在感知能力上表现尚可，但在需要长程规划、隐藏前置条件和持续探索的任务中，推理和行动能力出现显著断层。这不仅暴露了当前AI在“看见”到“行动”之间的鸿沟，也为具身智能等前沿领域的发展指明了方向。",
+      "tags": [
+        "AI",
+        "多模态大模型",
+        "具身智能",
+        "评测基准"
+      ],
+      "language": "zh",
+      "draft": false,
+      "publishedAt": "2026-08-23T00:00:00.000Z",
+      "aiAssisted": true,
+      "words": 1960,
+      "toc": [
+        {
+          "depth": 2,
+          "text": "参考资料"
+        }
+      ],
+      "sourcePath": "posts/ai/ai-greenhouse-effect-perception-to-action-gap.md",
+      "htmlPath": "docs-html/ai/ai-greenhouse-effect-perception-to-action-gap.html",
+      "sourceSha256": "ee6bc34534ea47166cdf50627dbf0da997a332c28e0b8b74aea6c4b17f8ac003",
+      "updatedAt": "2026-08-23T20:38:29+08:00"
     },
     {
       "slug": "ai-in-software-development-double-edged-sword",
