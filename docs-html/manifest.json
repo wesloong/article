@@ -1,7 +1,7 @@
 {
   "contractVersion": "1.0.0",
-  "generatedAt": "2026-08-23T12:38:50.054Z",
-  "contentSha": "e2d513721b436ecc46f54851b84156f1aed951cb",
+  "generatedAt": "2026-08-24T18:38:23.309Z",
+  "contentSha": "c20ff1912b67c9d85da2b89eb3252eb9f354fbb2",
   "posts": [
     {
       "slug": "ai-agent-evolution-personal-to-enterprise",
@@ -122,6 +122,33 @@
       "htmlPath": "docs-html/ai/ai-in-software-development-double-edged-sword.html",
       "sourceSha256": "7d94e9ee810c600aac5714efdeab43da0648c312b3f3ef3f55270029828d9239",
       "updatedAt": "2026-08-21T10:54:05+08:00"
+    },
+    {
+      "slug": "cloudflare-ai-data-exploration-intelligence-transformation",
+      "category": "ai",
+      "title": "AI 赋能数据探索：Cloudflare 的智能化转型",
+      "summary": "Cloudflare正通过AI技术重塑其数据服务，推出Radar Researcher等工具，使用户能以自然语言探索海量互联网数据。同时，通过整合Workers AI与AI Gateway，构建统一的AI控制平面，旨在简化AI应用的开发与部署，预示着AI在网络安全和数据分析领域的深度融合。",
+      "tags": [
+        "AI",
+        "Cloudflare",
+        "数据探索",
+        "自然语言处理"
+      ],
+      "language": "zh",
+      "draft": false,
+      "publishedAt": "2026-08-24T00:00:00.000Z",
+      "aiAssisted": true,
+      "words": 1926,
+      "toc": [
+        {
+          "depth": 2,
+          "text": "参考资料"
+        }
+      ],
+      "sourcePath": "posts/ai/cloudflare-ai-data-exploration-intelligence-transformation.md",
+      "htmlPath": "docs-html/ai/cloudflare-ai-data-exploration-intelligence-transformation.html",
+      "sourceSha256": "e63e72c8a1e97c169027495f7a0b12e2a70ab27fc9ee4563531dc1ff96b39c83",
+      "updatedAt": "2026-08-25T02:38:03+08:00"
     },
     {
       "slug": "ai-agents-from-greenhouse-to-open-world-challenges-and-new-e",

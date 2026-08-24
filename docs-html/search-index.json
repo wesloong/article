@@ -67,6 +67,22 @@
     ]
   },
   {
+    "slug": "cloudflare-ai-data-exploration-intelligence-transformation",
+    "category": "ai",
+    "title": "AI 赋能数据探索：Cloudflare 的智能化转型",
+    "summary": "Cloudflare正通过AI技术重塑其数据服务，推出Radar Researcher等工具，使用户能以自然语言探索海量互联网数据。同时，通过整合Workers AI与AI Gateway，构建统一的AI控制平面，旨在简化AI应用的开发与部署，预示着AI在网络安全和数据分析领域的深度融合。",
+    "tags": [
+      "AI",
+      "Cloudflare",
+      "数据探索",
+      "自然语言处理"
+    ],
+    "language": "zh",
+    "headings": [
+      "参考资料"
+    ]
+  },
+  {
     "slug": "ai-agents-from-greenhouse-to-open-world-challenges-and-new-e",
     "category": "engineering",
     "title": "AI智能体：从“温室”走向“开放世界”的挑战与评测新维度",
