@@ -16,6 +16,22 @@
     ]
   },
   {
+    "slug": "ai-agents-reshaping-internet-interaction-developer-future",
+    "category": "ai",
+    "title": "AI 代理的崛起：重塑互联网交互与开发者未来",
+    "summary": "AI 代理正以前所未有的速度改变着互联网的交互方式。从搜索引擎到网站内容，AI 代理正在成为用户获取信息和执行任务的新途径。这不仅对网站所有者提出了新的挑战，也为开发者带来了新的机遇，尤其是在利用 Serverless 和 WebAssembly 等技术构建更智能、更高效的 AI 应用方面。",
+    "tags": [
+      "AI",
+      "AI Agents",
+      "Serverless",
+      "WebAssembly"
+    ],
+    "language": "zh",
+    "headings": [
+      "参考资料"
+    ]
+  },
+  {
     "slug": "ai-era-font-defense-moat-or-moon-in-water",
     "category": "ai",
     "title": "AI 时代的字体攻防：是“护城河”还是“水中月”？",
